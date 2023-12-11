@@ -1,0 +1,463 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* NAV BAR SMALLER DEVICE */
+
+.nav {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.nav-menu {
+    width: 400px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: rgba(124, 122, 122, 0.661);
+    height: 100vh;
+}
+
+.nav-items,
+.nav-items a {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 25px 30px;
+    text-shadow:  0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(40%);
+    text-decoration: none;
+}
+
+.nav-items a:hover {
+    background-color: rgba(145, 147, 148, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-button {
+    background: none;
+    position: absolute;
+    border: none;
+    font-size: 25px;
+    padding: 20px;
+    color: white;
+    transition: all 0.3s linear;
+}
+
+.craves-logo {
+    width: 300px;
+    background: transparent;
+    border: none;
+    left: 20px;
+    position: absolute;
+}
+
+/* MAIN STARTING PAGE SMALLER DEVICE */
+
+.main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-photo {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    
+}
+
+.main-order {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+}
+
+.main-order img {
+    display: none;
+}
+
+.main-order p {
+    padding-top: 35px;
+    font-size: 20px;
+    color: white;
+    text-shadow:  0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.main-order button {
+    width: 200px;
+    background-image: linear-gradient( to right, rgb(215, 232, 248), cadetblue);
+    background-size: 200% 100%;
+    transition: background-position 0.4s;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    transform: translateX(20%);
+    font-weight: bold;
+    animation: fadebtn 2s ease forwards;
+}
+
+.main-order button:hover {
+    background-position: -100% 0;
+    transition: all 0.4s ease;
+}
+
+@keyframes fadebtn {
+    from {
+        transform: translateY(80%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ABOUT US SECTION SMALLER DEVICE*/
+
+.about-us {
+    height: auto;
+    width: 100%;
+    padding: 35px;
+
+}
+
+.about-us h2 {
+    color: cadetblue;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.about-us p {
+    padding-left: 30px;
+    font-size: 20px;
+    line-height: 40px;
+
+}
+
+.about-us-story {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 400px;
+    height: 100%;
+}
+
+.slide {
+    display: none;
+    width: auto;
+    height: auto;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* EVENTS SECTION SMALLER DEVICE*/
+
+
+
+.event-container {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "item1 item2"
+    "item3 item4";
+    gap: 10px;
+    background: rgba(194, 194, 196, 0.358);
+    justify-items: center;
+}
+
+.event-container h2 {
+    text-align: center;
+    grid-area: header;
+    font-size: 45px;
+    padding: 20px 0 20px 0;
+    color: cadetblue;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.item1 {
+    grid-area: item1;
+    width: 50%;
+}
+
+.item2 {
+    grid-area: item2;
+    width: 50%;
+}
+
+.item3 {
+    grid-area: item3;
+    width: 50%;
+}
+
+.item4 {
+    grid-area: item4;
+    width: 50%;
+}
+
+.event-individual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-individual img {
+    width: 200px;
+    height: auto;
+    padding: 15px 0;
+    border-radius: 50%;
+}
+
+/* FOOTER SMALLER SCREEN */
+
+.footer-container {
+    width: 100vw;
+    height: 450px;
+    background: cadetblue;
+    color: white;
+    clip-path: polygon(30% 5%, 70% 5%, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0);
+}
+
+.info {
+    width: 100vw;
+    height: auto;
+    padding: 2rem;
+}
+
+.info h3 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.hours {
+    font-size: 17px;
+    padding: 15px 0;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+}
+
+.end-logo {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-20%);
+}
+
+.copyright {
+    display: flex;
+    width: 100vw;
+    justify-content: center;    
+}
+
+@media (min-width: 900px) {
+
+    /* NAV SECTION FULL SCREEN */
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 100vw;
+        height: auto;
+    }
+
+    .nav-section {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        position: absolute;
+    }
+
+    .nav-menu {
+        width: 100vw;
+        height: 180px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        background: transparent;
+    }
+
+    .nav-items {
+        background: transparent;
+        border: none;
+        color: white;
+        padding: 20px 30px;
+        font-size: 18px;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+
+    }
+
+    .nav-items a:hover {
+        background: transparent;
+        color: rgb(143, 130, 121);
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .craves-logo {
+        width: 300px;
+        background: transparent;
+        border: none;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+   
+    /* MAIN STARTING PAGE FULL SCREEN */
+
+    .main {
+        width: 100vw;
+    }
+
+    .main-order {
+        width: 700px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 50%;
+        top: 15%;
+        transform: translate(-50%, 50%);
+    }
+
+    .main-order img {
+        display: inherit;
+        width: 650px;
+    }
+
+    .main-order p {
+        font-size: 40px;
+        color: white;
+        text-shadow:  0 5px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    /* ABOUT US SECTION FULL SCREEN */
+
+    .about-us {
+        padding: 20px 120px;
+    }
+
+    .about-us-story {
+        display: flex;
+        float: left;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .about-us-story p {
+        margin-left: 0;
+        flex: 1;     
+    }
+
+    .slideshow-container {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .slide {
+        width: 350px;
+        margin: 1rem;
+    }
+
+    .slide img {
+        width: 350px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+
+    /* EVENT SECTION FULL SCREEN */
+
+
+    .event-container {
+        width: 100vw;
+        height: 550px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header header header header"
+        "item1 item2 item3 item4";
+        gap: 10px;
+        background: rgba(194, 194, 196, 0.358);
+        justify-items: center;
+    }
+
+    .event-individual {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-individual img {
+        width: 220px;
+        height: auto;
+        padding: 15px 0;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 440px) {
+
+    .event-container {
+        width: 100vw;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "item1"
+        "item2"
+        "item3"
+        "item4";
+        gap: 10px;
+        background: rgba(194, 194, 196, 0.358);
+        justify-items: center;
+    }
+
+    .footer-container {
+        height: 475px;
+    }
+   
+}
+
+/* UTILITY CLASSES */
+
+.toggle {
+    display: none;
+}
+
+.no-break {
+    white-space: nowrap;
+}

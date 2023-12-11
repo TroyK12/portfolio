@@ -1,0 +1,584 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sono', sans-serif;
+    font-size: 1.5rem;
+    overflow: hidden;
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.splash-screen {
+    width: 100vw;
+    height: 100vh;
+    background: #202c39;
+    position: absolute;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-name {
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.splash-screen-animation-2 {
+    animation: fade 2s linear forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.splash-screen-animation {
+    animation: fadetotheright 2s linear forwards;
+}
+
+@keyframes fadetotheright {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-90%);
+    }
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#202c39fc, #b8b08dd4);
+    overflow: hidden;
+}
+
+/* ----------- NAVBAR--------------------- */
+
+.nav-main {
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 25px;  
+}
+
+.logo {
+    margin: 1rem;
+    height: 150px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.clear {
+    display: none;
+}
+
+.nav-menu {
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.nav-links {
+    font-size: 15px;
+    padding: 1px 15px;
+    margin: 17px;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    background: #F29559;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 2px 1px #f3f3f3, -3px -3px 3px #666666b2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-links:hover,
+.nav-menu li:hover {
+    transition: all 0.2s linear;
+    transform: scale(105%);
+    background: transparent;
+    color: white;
+}
+
+/* ------------- Projects --------------- */
+
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-height: 150px;
+    width: 70%;
+    top: 25px;
+    transform: translateX(200%);
+    /* overflow: hidden; */
+}
+
+.projects img {
+    height: 100px;
+    width: auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 7px 0.3px #b8b08d37;
+    transition: all 0.2s ease-in-out;
+    margin: 20px;
+}
+
+.projects img:hover {
+    transform: scale(120%);
+    box-shadow: 2px 2px 7px 0.3px #b8b08d86;
+}
+
+.projects a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects p {
+    font-size: 15px;
+    color: white;
+}
+
+.project-visible {
+    animation: projectanimation 2s linear forwards;
+}
+
+@keyframes projectanimation {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.project-invisible {
+    animation: projectanimation2 2s linear forwards;
+}
+
+@keyframes projectanimation2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(200%);
+    }
+}
+
+/* ---------- MAIN -------------- */
+
+.main-body {
+    white-space: nowrap;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-img {
+    transition: all 1s ease-in-out;
+}
+
+.name-img-invisible {
+    transform: translateX(250%);
+}
+
+.name-img-visible {
+    transform: translateX(0);
+}
+
+.name-title {
+    transition: all 1s ease-in-out;
+}
+
+.name-title-invisible {
+    transform: translateX(-200%);
+}
+
+.name-title-visible {
+    transform: translateX(0);
+}
+
+/* ------------ about --------------- */
+
+.about-area {
+    margin: 0;
+    transition: all 1s ease-in-out;
+    transform: translateY(200%);
+}
+
+.about-area-visible {
+    animation: aboutfade 2s ease-in forwards;
+}
+
+@keyframes aboutfade {
+    0% {
+        opacity: 0;
+        transform: translateY(200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-10%);
+    }
+}
+
+.about-area-invisible {
+    animation: aboutfadeout 2s ease-in forwards;
+}
+
+@keyframes aboutfadeout {
+    0% {
+        opacity: 1;
+        transform: translateY(-10%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(200%);
+    }
+}
+
+.close-btn-div {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 30px;
+}
+
+.close-about-btn {
+    font-size: 15px;
+    padding: 3px 15px;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    background: #F29559;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 2px 1px #f3f3f3, -3px -3px 3px #666666b2;
+}
+
+.about-area-lower {
+    display: flex;
+}
+
+.about-area-lower img {
+    width: 50%;   
+    padding: 20px; 
+}
+
+.about-area-right h2 {
+    padding-bottom: 20px;
+}
+
+.about-area-right p {
+    padding-right: 10px;
+    font-size: 17px;
+}
+
+/*-----------  Contact  -----------*/
+
+.contact-form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-190%);
+}
+
+.show-form {
+    animation: contactform 1s ease-in forwards;
+}
+
+@keyframes contactform {
+    from {
+        transform: translateY(-190%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-6%);
+        opacity: 1;
+    }
+}
+
+.no-show-form {
+    animation: nocontactform 1s ease-in forwards;
+}
+
+@keyframes nocontactform {
+    from {
+        transform: translateY(-6%);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-190%);
+        opacity: 0;
+    }
+}
+
+.form {
+    background: #ea7e36;
+    padding: 20px 0 20px 20px;
+    border-radius: 30px;
+    height: auto;
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.form h3 {
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+}
+
+.form input {
+    width: 90%;
+    padding: 11px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.form textarea {
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+.form button {
+    background: #202c39;
+    color: #F29559;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    width: 100px;
+}
+
+.form button:hover {
+    background-color: #445b74;
+    transform: scale(105%);
+}
+
+.form-status {
+    width: 30%;
+    height: 150px;
+    background-color: #202c397b;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    transform: translate(100%, -200%);
+}
+
+@media (max-width: 1220px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 980px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 770px) {
+    .about-area-lower {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-area-right p {
+        font-size: 13px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        z-index: 1000;
+    }
+
+    .project-visible {
+        animation: projectanimation 2s linear forwards;
+    }
+    
+    @keyframes projectanimation {
+        0% {
+            transform: translateX(150%);
+        }
+        100% {
+            transform: translate(-40%, 150%);
+        }
+    }
+    
+    .project-invisible {
+        animation: projectanimation2 2s linear forwards;
+    }
+    
+    @keyframes projectanimation2 {
+        0% {
+            transform: translate(-40%, 150%);
+        }
+        100% {
+            transform: translateX(200%);
+        }
+    }
+
+}
+
+@media (max-width: 650px) {
+    .name-title {
+        font-size: 20px;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+    .about-area-right h2 {
+        padding-bottom: 18px;
+    }
+    
+    .about-area-right p {
+        padding-right: 8px;
+        font-size: 14px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .about-area {
+        padding-bottom: 30px;
+    }
+
+    .project-visible {
+        animation: projectanimation 2s linear forwards;
+    }
+
+    .contact-form {
+        padding-bottom: 30px;
+    }
+    
+    @keyframes projectanimation {
+        0% {
+            transform: translateX(150%);
+        }
+        100% {
+            transform: translate(-90%, 150%);
+        }
+    }
+    
+    .project-invisible {
+        animation: projectanimation2 2s linear forwards;
+    }
+    
+    @keyframes projectanimation2 {
+        0% {
+            transform: translate(-90%, 150%);
+        }
+        100% {
+            transform: translateX(200%);
+        }
+    }
+}
+
+@media (max-width: 470px) {
+
+    .main {
+        height: 100vh;
+        overflow-y: scroll;
+    }
+
+    .name-img {
+        width: 300px;
+    }
+
+    .name-title {
+        font-size: 9px;
+    }
+
+    .about-area-right h2 {
+        padding-bottom: 13px;
+    }
+    
+    .about-area-right p {
+        padding-right: 5px;
+        font-size: 12px;
+    }
+
+    .name-title {
+        font-size: 15px;
+    }
+
+    .form {
+        height: 95%;
+    }
+
+    .project-visible {
+        animation: projectanimation 2s linear forwards;
+    }
+    
+    @keyframes projectanimation {
+        0% {
+            transform: translateX(150%);
+        }
+        100% {
+            transform: translate(-120%, 150%);
+        }
+    }
+    
+    .project-invisible {
+        animation: projectanimation2 2s linear forwards;
+    }
+    
+    @keyframes projectanimation2 {
+        0% {
+            transform: translate(-120%, 150%);
+        }
+        100% {
+            transform: translateX(200%);
+        }
+    }
+}
+
+
+
+
+
+
+

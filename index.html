@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/head_img.png" type="image/x-icon">
+    <title>Troy M Kush</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <div id="splash-screen" class="splash-screen"><h1 id="cover-name" class="cover-name">Troy's Portfolio</h1></div>
+        <nav class="nav-main">
+            <div class="nav-header">
+                <a href="#"><img class="logo" src="/img/head_img.png" alt="Photo"></a>
+            </div>
+                <ul id="nav-menu-id" class="nav-menu"> 
+                    <li>
+                        <a id="nav-about" class="nav-links">About</a>
+                    </li>
+                    <li>
+                        <a id="nav-contact" class="nav-links">Contact</a>
+                    </li>
+                    <li>
+                        <a id="nav-project" class="nav-links">Projects</a>
+                    </li>
+                </ul>
+                
+                    <div id="projects" class="projects">
+                        <a href="/craves-vanilla-js/home.html"><img src="img/restaurant-home.png" alt="Restaurant Site"><p>Craves Coffee</p></a>
+                        <a href="/woodman-vanilla-js/index.html"><img src="img/construction-company.png" alt="woodman Works"><p>Woodman Contractor</p></a>
+                        <a href="/forbidden-future-salon/index.html"><img src="img/salon-beauty.png" alt="Forbidden Future"><p>Forbidden Future Beauty</p></a>
+                        <a href="/"><img src="img/coming-soon.jpg" alt="temp"></a>
+                    </div>
+
+        </nav>
+        <div class="main-body">
+            <img id="name-img" class="name-img" src="img/Name.svg" alt="Troy Kush" height="250" width="400">
+            <p id="name-title" class="name-title">Full Stack developer // UX, UI Developer</p>
+        </div>
+        <div id="about-area" class="display-none about-area">
+            <div class="close-btn-div">
+                <i id="close-about" class="fa-solid fa-x close-about-btn"></i>
+            </div>
+            <div class="about-area-lower">
+                <img src="img/ohey.png">
+                <div class="about-area-right">
+                    <h2>O’Hey! My name's Troy!</h2>
+                    <p>
+                        While embarking on my journey in website development, I've upacked this passion 
+                        for crafting digital experiences that empower businesses to thrive and 
+                        continuously improve and innovate.
+                        <br><br>
+                        My journey started during my deployment overseas a couple years ago, where I 
+                        started on a self-guided educational path to master HTML, CSS, JavaScript, 
+                        and frameworks such as React and Next.js. 
+                        <br><br>
+                        During my journey of website development, I've encountered my fair share of 
+                        challenges. These obstacles, while not always straightforward, are the very 
+                        essence of what fuels my passion. I thrive on the process of identifying and 
+                        resolving these issues, viewing them as opportunities for growth and 
+                        continuous improvement in my work.
+                        <br><br>
+                        To look an some of the different projects, click the 'Projects' tab located at the 
+                        top of the screen. There, you will find a showcase of some of my portfolio.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-form" class="contact-form display-none">
+            <form class="form" action="https://formspree.io/f/maygogey" method="POST">
+                <h3>Name</h3>
+                <input type="text" name="name" placeholder="John" required>
+                <h3>Email</h3>
+                <input type="text" name="email" placeholder="Email@email.com" required>
+                <h3>Phone Number</h3>
+                <input type="text" name="phone" placeholder="(555) 555-5555" required>
+                <h3>Send Me a Message!</h3>
+                <textarea name="textbox" cols="50" rows="15" placeholder="Type Here"></textarea>
+                <div>
+                    <button id="submit-btn" class="submit" type="submit">Send</button>
+                    <button id="cancel-btn" type="button">Cancel</button>
+                </div>
+                <p class="my-form-status"></p>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

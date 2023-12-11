@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kanit:ital,wght@0,300;0,700;1,300;1,700&family=Shantell+Sans&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.display-none {
+    display: none;
+}
+
+/* ------- main --------- */
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(90, 90, 90, 0.5);
+}
+
+.main-background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.main-nav {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    background: rgba(51, 51, 51, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-nav img {
+    width: 200px;
+    height: auto;
+}
+
+.bars-area {
+    display: none;
+}
+
+.nav-items {
+    display: flex;
+}
+
+.nav-items li {
+    list-style: none;
+    padding-left: 30px;
+}
+
+.nav-items a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    text-shadow: 1px 1px 2px rgb(120, 120, 120);
+}
+
+.nav-items a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px; 
+    bottom: 0;
+    left: 0;
+    background-color: black; 
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.nav-items a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.apts-btn {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 5px;
+}
+
+.apts-btn:hover {
+    color: white;
+    background: black;
+}
+
+.messages {
+    color: rgba(244, 245, 255, 0.85);
+    font-size: 70px;
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 2px 2px #333;
+    position: absolute;
+    width: 85%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 80%;
+    transition: all 1s ease-in-out;
+}
+
+.apts-main {
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+    bottom: 20%;
+}
+
+.apts-btn-main {
+    background-color: rgba(240, 255, 252, 0.8);
+    border: 2px solid black;
+    border-left: none;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.apts-btn-main:hover {
+    background-color: black;
+    color: white;
+}
+
+/* --------- services ---------- */
+
+.services-area {
+    width: 100%;
+    height: auto;
+    /* background: rgb(228, 228, 228); */
+    background: whitesmoke;
+    padding: 50px;
+}
+
+.services-header {
+    width: 40%;
+    padding-bottom: 30px;
+}
+
+.services-header h2 {
+    color: rgb(198, 150, 30);
+    font-size: 60px;   
+}
+
+.services-header p {
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.services-grid {
+    width: auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: flex-start;
+    align-items: center;
+}
+
+.services-grid img {
+    border-radius: 5px;
+    width: 300px;
+    height: auto;
+}
+
+.service-item {
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.service-item:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(110%) !important;
+}
+
+.service-item p {
+    width: 100%;
+    height: 40px;
+    background: rgba(62, 62, 62, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: translateY(-110%);
+    border-radius: 0 0 5px 5px;
+}  
+
+/* ---------- slogan --------------- */
+
+.slogan-area {
+    background-image: url(img/slogan-img.JPG);
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 400px;
+}
+
+.cover-slogan-img {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(93, 93, 93, 0.811);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan-area h2 {
+    transition: all 1.5s ease-in-out;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.slogan-area h4 {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.slogan-area p {
+    color: rgb(198, 150, 30);
+}
+
+.cover-slogan-img button {
+    border: none;
+    background: black;
+    padding: 10px 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cover-slogan-img a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.gold {
+    color: rgb(198, 150, 30);
+}
+
+.cover-slogan-img button:hover {
+    background: rgb(198, 150, 30);
+}
+
+/* -------- Products --------------- */
+
+.products-main-area {
+    width: auto;
+    height: auto;
+    background: whitesmoke;
+    display: flex;
+    justify-content: flex-start;
+    padding: 80px 100px;
+}
+
+.products-item {
+    margin: 0 10px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.products-main-area img {
+    max-width: 90%;
+    border-radius: 2px;
+    box-shadow: 5px 10px 4px rgba(66, 66, 66, 0.25);
+    transition: all 1s ease-in-out;
+}
+
+.products-desc {
+    padding-top: 30px;
+    width: 90%;
+}
+
+.products-desc p {
+    color: rgb(89, 89, 89);
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.products-desc button {
+    margin-top: 60px;
+    padding: 10px 35px;
+    border: 3px solid rgb(198, 150, 30);
+    border-radius: 5px;
+    background: transparent;
+    transition: background-position 0.4s ease-in-out;
+}
+
+.products-desc a {
+    color: rgb(89, 89, 89);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.products-desc button:hover {
+    background: linear-gradient(to right,  rgb(198, 150, 30), transparent);
+    background-size: 200% 100%;
+    background-position: -100% 0;
+    transition: all 0.4s ease-in-out;
+}
+
+/* ------------ footer ------------- */
+
+.footer {
+    width: 100vw;
+    height: 400px;
+    background: whitesmoke;
+}
+
+.footer-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-left img {
+    width: 235px;
+    height: auto;
+    border-radius: 30px;
+    padding-bottom: 20px;
+}
+.footer-left address {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.footer-left a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+}
+
+.footer-socials {
+    display: flex;
+    padding: 50px 0;
+}
+
+.footer-socials a {
+    font-size: 17px;
+    padding: 0 20px 0 0;
+    color: rgb(0, 0, 0);
+}
+
+.copyright {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+/* -------- Screen Sizings --------- */
+
+
+@media (max-width: 1300px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1020px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 870px) {
+    .nav-items a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 800px) {
+    .apts-btn {
+        display: none;
+    }
+
+    .products-main-area {
+        padding: 80px 50px;
+    }
+}
+
+@media (max-width: 650px) {
+    .nav-items {
+        display: none;
+    }
+
+    .apts-main {
+        position: fixed;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bars-area {
+        display: flex;
+        width: 100vw;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        transform: translateX(-15%);
+        z-index: 9999;
+    }
+
+    .bars {  
+        font-size: 25px;
+    }
+
+    .sliding-nav {
+        width: 100vw;
+        height: 85%;
+        position: fixed;
+        z-index: 900;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translate(100%, -118%);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .show-nav {
+        transform: translate(0, -120%);
+    }
+    
+    .nav-items-sliding {
+        background: rgba(67, 67, 67, 0.8);
+        width: 40%;
+        height: 100%;
+        border-radius: 20px 0 0 20px;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .nav-items-sliding li {
+        list-style-type: none;
+        padding: 25px 0;
+    }
+    
+    .nav-items-sliding a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav-items-sliding address {
+        color: white;
+    }
+
+    .products-main-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 50px;
+    }
+
+    .products-item {
+        margin: 10px 10px;
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .messages {
+        font-size: 50px;
+    }
+
+    .services-header {
+        width: 80%;
+    }
+
+    .slogan-area h2 {
+        font-size: 20px;
+    }
+
+    .footer-right {
+        padding: 100px 20px 0 0 ;
+    }
+}
